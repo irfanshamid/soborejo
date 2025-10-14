@@ -35,10 +35,10 @@ Description: Skyre - Building & Construction Services Laravel 12 Template
     --white: #fff;
     --black: #000;
     --dark: #111;
-    --theme: #c11425;
+    --theme: #296eb4;
     --theme2: #f5f5f5;
     --title: #7c7b7b;
-    --yellow: #ffc000;
+    --yellow: #73bfb8;
     --border: #ccc;
     --box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
     --icon-font: "Font Awesome 6 Pro";
@@ -9250,7 +9250,7 @@ span {
     letter-spacing: 1.6px;
     text-transform: capitalize;
     border-radius: 5px;
-    border: 1px solid var(--Secondary, #c11425);
+    border: 1px solid var(--Secondary, #296eb4);
     background: var(--900, #000);
     padding: 18px 28px;
     transition: all 0.3s ease-in-out;
@@ -9306,7 +9306,7 @@ span {
     text-align: center;
     letter-spacing: 1.6px;
     text-transform: capitalize;
-    border: 1px solid var(--Secondary, #c11425);
+    border: 1px solid var(--Secondary, #296eb4);
     border-radius: 30px;
     padding: 19px 30px;
     transition: all 0.3s ease-in-out;
@@ -9401,7 +9401,7 @@ span {
     align-items: center;
     gap: 10px;
     border-radius: 5px;
-    background: var(--Primary, #ffc000);
+    background: var(--Primary, #73bfb8);
     color: var(--900, #000);
     font-size: 15px;
     font-weight: 700;
@@ -9457,7 +9457,7 @@ span {
     align-items: center;
     gap: 10px;
     border-radius: 5px;
-    background: var(--Primary, #ffc000);
+    background: var(--Primary, #73bfb8);
     color: var(--900, #000);
     font-size: 15px;
     font-weight: 700;
@@ -9702,7 +9702,7 @@ span {
 .square-icon {
     width: 20px;
     height: 20px;
-    background: var(--Secondary, #c11425);
+    background: var(--Secondary, #296eb4);
 }
 
 .subscribe1-btn {
@@ -9992,7 +9992,7 @@ span {
 }
 
 .loader::before {
-    border-color: #c11425 rgba(0, 0, 0, 0);
+    border-color: #296eb4 rgba(0, 0, 0, 0);
     animation: inherit;
     animation-duration: 0.5s;
     animation-direction: reverse;
@@ -12202,7 +12202,7 @@ img {
     }
 }
 .hero1-client-review__item__2 {
-    background-color: #c11425;
+    background-color: #296eb4;
     position: absolute;
     top: 337px;
     right: -139px;
@@ -13404,7 +13404,7 @@ img {
     display: flex;
     width: 100px;
     height: 100px;
-    background: var(--Secondary, #c11425);
+    background: var(--Secondary, #296eb4);
     border-radius: 50px;
     justify-content: center;
     align-items: center;
@@ -13423,7 +13423,7 @@ img {
     }
 }
 .service2-card:hover:before {
-    background: linear-gradient(180deg, rgba(193, 20, 37, 0) 0%, #c11425 45.9%);
+    background: linear-gradient(180deg, rgba(193, 20, 37, 0) 0%, #296eb4 45.9%);
 }
 .service2-card:hover .service2-card:before {
     opacity: 1;
@@ -13533,7 +13533,7 @@ img {
     margin-bottom: 20px;
 }
 .service1-details__menu ul li span {
-    background-color: #c11425;
+    background-color: #296eb4;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -13665,8 +13665,8 @@ img {
     }
 }
 .project1-card:hover .project1-card-content-btn__item {
-    border: 1px solid var(--Secondary, #c11425);
-    color: var(--Secondary, #c11425);
+    border: 1px solid var(--Secondary, #296eb4);
+    color: var(--Secondary, #296eb4);
     transition: all 0.3s;
 }
 .project1-card:hover .project1-card-link__btn {
@@ -13785,8 +13785,8 @@ img {
     }
 }
 .project2-card:hover .project2-card--top-content-btn__item {
-    border: 1px solid var(--Secondary, #c11425);
-    color: var(--Secondary, #c11425);
+    border: 1px solid var(--Secondary, #296eb4);
+    color: var(--Secondary, #296eb4);
     transition: all 0.3s;
 }
 
@@ -13882,7 +13882,7 @@ img {
     gap: 10px;
 }
 .testimonial1-card-content__star ul i {
-    color: var(--Primary, #ffc000);
+    color: var(--Primary, #73bfb8);
     font-size: 16px;
     font-style: normal;
     font-weight: 900;
@@ -14303,7 +14303,7 @@ img {
     # Faq style here
 ----------------------------------------------*/
 .faq1__live-link {
-    color: var(--Secondary, #c11425);
+    color: var(--Secondary, #296eb4);
     font-feature-settings: "liga" off, "clig" off;
     font-family: Rajdhani;
     font-size: 15px;
@@ -14409,7 +14409,7 @@ img {
 
 /* 13. CTA */
 .cta1 {
-    background: var(--Secondary, #c11425);
+    background: var(--Secondary, #296eb4);
 }
 .cta1__title {
     color: var(--White, #fff);
@@ -14440,7 +14440,7 @@ img {
     align-items: center;
     gap: 10px;
     border-radius: 5px;
-    background: var(--Primary, #ffc000);
+    background: var(--Primary, #73bfb8);
     color: var(--900, #000);
     font-family: Rajdhani;
     font-size: 15px;
@@ -14457,7 +14457,7 @@ img {
 .cta2 {
     position: relative;
     overflow: visible;
-    background: var(--Secondary, #c11425);
+    background: var(--Secondary, #296eb4);
 }
 .cta2__title {
     color: var(--White, #fff);
@@ -14548,7 +14548,7 @@ img {
     background: linear-gradient(
         180deg,
         rgba(193, 20, 37, 0) 50.5%,
-        #c11425 100%
+        #296eb4 100%
     );
     z-index: 9;
     pointer-events: none;
@@ -14589,7 +14589,7 @@ img {
     }
 }
 .subscribe1-wrapper-content__text h2 span {
-    color: var(--Secondary, #c11425);
+    color: var(--Secondary, #296eb4);
     font-size: 60px;
     font-weight: 700;
 }
@@ -14816,7 +14816,7 @@ img {
     line-height: 110%;
 }
 .footer2-wrapper-logoInfo-social__item a:hover i {
-    color: var(--Secondary, #c11425);
+    color: var(--Secondary, #296eb4);
 }
 .footer2-wrapper-logoInfo-social__item a:hover svg path {
     fill: var(--theme);
@@ -14922,7 +14922,7 @@ img {
     color: var(--theme);
 }
 .footer2-wrapper-contact-list__item a i {
-    color: var(--Secondary, #c11425);
+    color: var(--Secondary, #296eb4);
     font-size: 14px;
     font-style: normal;
     font-weight: 900;
@@ -14970,7 +14970,7 @@ img {
 }
 .footer2-wrapper-subscribe-form__button img {
     border-radius: 999px;
-    background: var(--Secondary, #c11425);
+    background: var(--Secondary, #296eb4);
     padding: 22px;
 }
 .footer2-wrapper-subscribe-form__button :hover {

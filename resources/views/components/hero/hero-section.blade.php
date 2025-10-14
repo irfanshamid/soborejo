@@ -1,7 +1,7 @@
 @props(['headline'])
 
 <section class="hero1 fix bg-black">
-    <div class="hero1-shape">
+    <!-- <div class="hero1-shape">
         <div class="hero1-shape-1">
             <img class="img-fluid" src="{{ asset("assets/images/hero/hero_shape_1_1.png") }}" alt="">
         </div>
@@ -17,7 +17,7 @@
         <div class="hero1-shape-5">
             <img class="img-fluid" src="{{ asset("assets/images/hero/hero_shape_1_2.png") }}" alt="">
         </div>
-    </div>
+    </div> -->
     <div class="container position-relative">
         <div class="row gy-5 align-items-center">
             <div class="col-lg-5">
@@ -39,12 +39,12 @@
             <div class="col-lg-7">
                 <div class="hero1-thumb">
 
-                    <div class="hero1-ellipse">
+                    <!-- <div class="hero1-ellipse">
                         <div class="hero1-ellipse__img ripple">
                             <img src="{{ asset("assets/images/hero/hero1-img.png") }}" alt="">
                         </div>
 
-                    </div>
+                    </div> -->
                     <!-- <div class="hero1-thumb-shape__one ">
                         <img class="img-fluid" 
                             src="{{ asset('storage/' . $headline->banner_img) }}" 
@@ -63,7 +63,9 @@
                     <div class="hero1-thumb-imges wow img-custom-anim-right" data-wow-duration="1.5s" data-wow-delay=".4s">
                             <img 
                             src="{{ asset('storage/' . $headline->banner_img) }}" 
-                            alt="{{ $headline->title ?? 'Headline Image' }}">
+                            alt="{{ $headline->title ?? 'Headline Image' }}"
+                            style="width: 100%; height: 600px; object-fit: contain;"
+                            >
                     </div>
                 </div>
             </div>
