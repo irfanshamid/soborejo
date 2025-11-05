@@ -13,6 +13,9 @@ use App\Models\Project;
 use App\Models\ScopeOfWork;
 use App\Models\LegalDocument;
 use App\Models\GeneralSetting;
+use App\Models\SiteCounter;
+use App\Models\Blog;
+use App\Models\Faq;
 
 class HomeController extends Controller
 {
@@ -31,6 +34,9 @@ class HomeController extends Controller
         $scopeOfWorkList = ScopeOfWork::get();
         $legalDoc = LegalDocument::limit(8)->get();
         $generalSetting = GeneralSetting::first();
+        $counterData = SiteCounter::first();
+        $blogData = Blog::limit(3)->get();
+        $faqs = Faq::get();
 
         return view('home.index', compact(
             'headline',
@@ -44,6 +50,9 @@ class HomeController extends Controller
             'scopeOfWorkList',
             'legalDoc',
             'generalSetting',
+            'counterData',
+            'blogData',
+            'faqs',
         ));
     }
 

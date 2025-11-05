@@ -34,6 +34,15 @@
     <!--===== PROJECT =====-->
     <x-projects.project-section :projects="$projectData" />
 
+    <!--===== Counter Section  S T A R T =====-->
+    <x-counter.counter-section :counterData="$counterData" />
+
+    <!--===== Blog Section  S T A R T =====-->
+    <x-blog.blog-section :blogs="$blogData" />
+
+    <!--===== Faq Section  S T A R T =====-->
+    <x-faq.faq-section :faqs="$faqs" />
+
     <!--===== CONTACT INFORMATION =====-->
     <x-cta.cta-section :contact="$generalSetting"/>
 @endsection

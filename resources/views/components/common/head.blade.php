@@ -10,7 +10,7 @@
     <title>@yield('title', $settings->title) | {{$settings->description}}</title>
 
     <!--===== Favicon =====-->
-    <link rel="shortcut icon" href="{{ asset("assets/images/favicon.png") }}">
+    <link rel="shortcut icon" href="{{ asset('storage/' . $settings->favicon) }}">
     <!--===== Bootstrap min.css =====-->
     <link rel="stylesheet" href="{{ asset("assets/css/bootstrap.min.css") }}">
     <!--===== All Min Css =====-->

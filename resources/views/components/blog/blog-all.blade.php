@@ -1,21 +1,17 @@
-@props(['blogs' => []])
-
-<section class="blog1 section-padding pb-0 fix">
+@props(['blog'])
+<section class="project1 section-padding fix" id="blog">
     <div class="container">
         <div class="row g-4">
             <div class="col-lg-12">
-                <div class="section-top section-top--wrapper flex-wrap align-items-center gap-2 brBt-1 pb-30 wow img-custom-anim-zoom-out " data-wow-duration="1s" data-wow-delay=".1s">
+                <div class="section-top section-top--wrapper flex-wrap align-items-center brBt-1 pb-30 gap-2 wow img-custom-anim-zoom-out " data-wow-duration="1s" data-wow-delay=".1s">
                     <div class="title-area mb-20  ">
                         <div class="square-icon"></div>
-                        <h2 class="section-top__title1">Recent Blogs</h2>
-                    </div>
-                    <div class="btn-wrapper mb-20">
-                        <a class="theme-btn style2 style2-black" href="{{ route('blogs.index') }}">All blogs <i class="fa-regular fa-angle-right"></i></a>
+                        <h2 class="section-top__title1">Blogs</h2>
                     </div>
                 </div>
             </div>
-            {{-- Loop through each blog item --}}
-            @foreach ($blogs as $blog)
+
+            @foreach ($blog as $blog)
                 <div class="col-md-6 col-lg-4">
                     <div class="blog1-card">
                         <div class="blog1-card__thumb wow img-custom-anim-top" data-wow-duration="1s" data-wow-delay=".1s">

@@ -20,12 +20,12 @@
                                     <div class="accordion-item">
                                         <h3 class="accordion-header">
                                             <button class="accordion-button accordion-button--bg collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{ $faq->id }}" aria-expanded="false" aria-controls="{{ $faq->id }}">
-                                                {{ $faq->question }}
+                                                {{ $faq->title }}
                                             </button>
                                         </h3>
                                         <div id="{{ $faq->id }}" class="accordion-collapse collapse" data-bs-parent="#accordion">
                                             <div class="accordion-body accordion-body--bg">
-                                                {{ $faq->answer }}
+                                                {!! $faq->content !!}
                                             </div>
                                         </div>
                                     </div>
@@ -35,11 +35,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12">
+            <!-- <div class="col-12">
                 <a href="#!">
                     <h4 class="faq1__live-link">Talk to our support team live <img src="{{ asset('assets/images/icon/live-link.svg') }}" alt="svg"></h4>
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>

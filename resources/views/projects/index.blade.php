@@ -1,13 +1,11 @@
-@extends('layouts.layout-detail', [
+@extends('layouts.layout', [
+    'headerStyle' => 'py-22 header-area-space-2',
+    'headerBtnStyle' => 'style3',
     'headerWrapper' => false,
     'hasFooterMarque' => false,
-    'footerMarqueTopMargin' => 'mt-80',
-    'footerMarqueLevelOneStyle' => 'marque-section-4',
-    'footerMarqueLevelTwoStyle' => 'marque-section-5',
-    'hasFooterSubscriptionForm' => false,
 ])
 
-@section('title', 'Projects')
+@section('title', 'Project')
 @section('meta_description', 'Building & Construction Services')
 @section('meta_tags', 'architecture, building, construction, constructor, contractor, engineering, industry, painter, renovation')
 

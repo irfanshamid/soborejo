@@ -4,8 +4,9 @@
             <a href="{{ route('home') }}" class="mobile-offcanvas-logo">
                 <img
                     class="img-fluid"
-                    src="{{ asset('storage/' . $settings->image) }}" 
+                    src="{{ asset('storage/' . $settings->logo) }}" 
                     alt="brand"
+                    width="200"
                 >
             </a>
             <div class="mobile-offcanvas-close">

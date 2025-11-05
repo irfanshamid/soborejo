@@ -9972,17 +9972,33 @@ span {
 }
 
 .loader {
-    width: 50px;
+    /* width: 50px; */
     aspect-ratio: 1;
     display: grid;
-    border: 4px solid rgba(0, 0, 0, 0);
+    /* border: 4px solid rgba(0, 0, 0, 0);
     border-radius: 50%;
-    border-color: #7c7b7b rgba(0, 0, 0, 0);
-    animation: l16 1s infinite linear;
+    border-color: #7c7b7b rgba(0, 0, 0, 0); */
+    /* animation: l16 1s infinite linear; */
     z-index: 999999;
 }
 
-.loader::before,
+.loader img {
+    width: 200px;
+    object-fit: contain;
+    animation: fadeInOut 1.5s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* .loader::before,
 .loader::after {
     content: "";
     grid-area: 1/1;
@@ -10000,7 +10016,7 @@ span {
 
 .loader::after {
     margin: 8px;
-}
+} */
 
 @keyframes l16 {
     100% {
