@@ -26,7 +26,19 @@ class ProjectResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('title')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(function (Forms\Set $set, ?string $state) {
+                        if (filled($state)) {
+                            $set('slug', \Illuminate\Support\Str::slug($state));
+                        }
+                    }),
+
+                Forms\Components\TextInput::make('slug')
+                    ->required()
+                    ->maxLength(255)
+                    ->unique(ignoreRecord: true)
+                    ->helperText('URL-friendly slug, e.g. proyek-gedung-industri'),
 
                 Forms\Components\FileUpload::make('image')
                     ->label('Project Image')
@@ -77,6 +89,10 @@ class ProjectResource extends Resource
 
                 Tables\Columns\TextColumn::make('title')
                     ->sortable()
+                    ->searchable(),
+
+                Tables\Columns\TextColumn::make('slug')
+                    ->toggleable()
                     ->searchable(),
 
                 Tables\Columns\TextColumn::make('url')

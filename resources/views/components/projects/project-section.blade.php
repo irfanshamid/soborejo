@@ -23,14 +23,14 @@
                                     <div class="project1-card-content-btn__item">{{ $category }}</div>
                                 @endforeach
                             </div>
-                            <a href="{{ route('projects.details', $project->id) }}">
+                            <a href="{{ route('projects.details', $project->slug) }}">
                                 <h3 class="project1-card-content__title">{{ $project->title }}</h3>
                             </a>
                             <p class="project1-card-content__desc">{!! $project->description !!}</p>
                         </div>
                         <div class="project1-card-link">
                             <div class="project1-card-link__desc">Tap to learn More</div>
-                            <a href="{{ route('projects.details', $project->id) }}" class="project1-card-link__btn">
+                            <a href="{{ route('projects.details', $project->slug) }}" class="project1-card-link__btn">
                                 <img class="svg" src="{{ asset('assets/images/icon/arrow-up-right.svg') }}" alt="svg">
                             </a>
                         </div>

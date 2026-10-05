@@ -7,13 +7,28 @@
     'hasFooterSubscriptionForm' => false,
 ])
 
-@section('title', 'Blog Details')
-@section('meta_description', 'Building & Construction Services Laravel 12 Template')
-@section('meta_tags', 'architecture, building, construction, constructor, contractor, engineering, industry, painter, renovation')
+@php
+    $postDescription = \Illuminate\Support\Str::limit(strip_tags($blogData->content ?? ''), 160);
+    if ($postDescription === '') {
+        $postDescription = $blogData->title.' — artikel dari PT Soborejo.';
+    }
+    $postImage = ! empty($blogData->image) ? asset('storage/'.$blogData->image) : '';
+@endphp
+
+@section('title', $blogData->title)
+@section('meta_description', $postDescription)
+@section('meta_keywords', 'blog konstruksi, '.$blogData->title.', PT Soborejo, general contractor Indonesia')
+@section('canonical', route('blogs.details', $blogData->slug))
+@section('og_type', 'article')
+@section('og_image', $postImage)
 
 @section('content')
     <!--===== Breadcrumb Section  S T A R T =====-->
-    <x-common.breadcrumb :bg="$blogBg" title="Blog Details" :breadcrumbs="['Home' => route('home'), 'Blogs Details' => '']" />
+    <x-common.breadcrumb
+        :bg="$blogBg"
+        :title="$blogData->title"
+        :breadcrumbs="['Home' => route('home'), 'Blog' => route('blogs.index'), $blogData->title => '']"
+    />
 
     <!--===== Project Details Section  S T A R T =====-->
     <x-blog.blog-new-details :blog="$blogData" />

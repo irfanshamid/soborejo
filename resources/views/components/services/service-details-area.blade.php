@@ -9,7 +9,7 @@
         {{ $service->description }}
     </p>
 
-    <a class="theme-btn style1" href="{{ route('services.details', $service->id) }}">
+    <a class="theme-btn style1" href="{{ route('services.details', $service->slug) }}">
         View Document <i class="fa-regular fa-angle-right"></i>
     </a>
 </div>

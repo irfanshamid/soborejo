@@ -35,7 +35,12 @@ class HomeController extends Controller
         $legalDoc = LegalDocument::limit(8)->get();
         $generalSetting = GeneralSetting::first();
         $counterData = SiteCounter::first();
-        $blogData = Blog::limit(3)->get();
+        $blogData = Blog::query()
+            ->where('active', true)
+            ->orderByDesc('date')
+            ->orderByDesc('created_at')
+            ->limit(3)
+            ->get();
         $faqs = Faq::get();
 
         return view('home.index', compact(

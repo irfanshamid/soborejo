@@ -6,9 +6,9 @@
     'footerMarqueLevelTwoStyle' => 'marque-section-5',
 ])
 
-@section('title', '404')
-@section('meta_description', 'Building & Construction Services Laravel 12 Template')
-@section('meta_tags', 'architecture, building, construction, constructor, contractor, engineering, industry, painter, renovation')
+@section('title', 'Halaman Tidak Ditemukan')
+@section('meta_description', 'Halaman yang Anda cari tidak ditemukan di situs PT Soborejo.')
+@section('meta_robots', 'noindex, follow')
 
 @section('content')
     <!--===== Breadcrumb Section    S T A R T =====-->

@@ -26,7 +26,19 @@ class LegalDocumentResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('title')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(function (Forms\Set $set, ?string $state) {
+                        if (filled($state)) {
+                            $set('slug', \Illuminate\Support\Str::slug($state));
+                        }
+                    }),
+
+                Forms\Components\TextInput::make('slug')
+                    ->required()
+                    ->maxLength(255)
+                    ->unique(ignoreRecord: true)
+                    ->helperText('URL-friendly slug, e.g. izin-usaha'),
 
                 Forms\Components\Textarea::make('description')
                     ->nullable()
@@ -45,6 +57,7 @@ class LegalDocumentResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('slug')->toggleable()->searchable(),
                 Tables\Columns\TextColumn::make('description')->limit(50),
                 Tables\Columns\TextColumn::make('document')
                     ->label('File')

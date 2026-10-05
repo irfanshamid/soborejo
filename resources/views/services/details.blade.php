@@ -7,13 +7,26 @@
     'hasFooterSubscriptionForm' => false,
 ])
 
-@section('title', 'Legal Document Details')
-@section('meta_description', 'Building & Construction Services Laravel 12 Template')
-@section('meta_tags', 'architecture, building, construction, constructor, contractor, engineering, industry, painter, renovation')
+@php
+    $serviceDescription = \Illuminate\Support\Str::limit(strip_tags($service->description ?? ''), 160);
+    if ($serviceDescription === '') {
+        $serviceDescription = 'Dokumen legal '.$service->title.' — PT Soborejo, general contractor Indonesia.';
+    }
+@endphp
+
+@section('title', $service->title)
+@section('meta_description', $serviceDescription)
+@section('meta_keywords', $service->title.', dokumen legal PT Soborejo, perusahaan konstruksi Indonesia')
+@section('canonical', route('services.details', $service->slug))
+@section('og_type', 'article')
 
 @section('content')
     <!--===== Breadcrumb Section  S T A R T =====-->
-    <x-common.breadcrumb :bg="$serviceBg" title="Legal Document Details" :breadcrumbs="['Home' => route('home'), 'Legal Document Details' => '']" />
+    <x-common.breadcrumb
+        :bg="$serviceBg"
+        :title="$service->title"
+        :breadcrumbs="['Home' => route('home'), 'Dokumen Legal' => route('services.index'), $service->title => '']"
+    />
 
     <!--===== Service Section    S T A R T =====-->
     <section class="service1-details mt-120">

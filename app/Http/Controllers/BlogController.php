@@ -14,15 +14,28 @@ class BlogController extends Controller
     public function index()
     {
         $blogBg = Headline::first();
-        $blogData = Blog::get();
-        return view('blog.index', compact(['blogData','blogBg']));
+        $blogData = Blog::query()
+            ->where('active', true)
+            ->orderByDesc('date')
+            ->orderByDesc('created_at')
+            ->get();
+
+        return view('blog.index', compact(['blogData', 'blogBg']));
     }
 
-    public function details($id)
+    public function details(string $slug)
     {
         $blogBg = Headline::first();
-        $blogData = Blog::whereId($id)->first();
-        if (!$blogData) {
+        $blogData = Blog::query()->where('slug', $slug)->first();
+
+        if (! $blogData && ctype_digit($slug)) {
+            $blogData = Blog::query()->find($slug);
+            if ($blogData?->slug) {
+                return redirect()->route('blogs.details', $blogData->slug, 301);
+            }
+        }
+
+        if (! $blogData) {
             abort(404);
         }
 

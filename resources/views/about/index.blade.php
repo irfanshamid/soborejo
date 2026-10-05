@@ -7,9 +7,10 @@
     'hasFooterSubscriptionForm' => true,
 ])
 
-@section('title', 'About Us')
-@section('meta_description', 'Building & Construction Services Laravel 12 Template')
-@section('meta_tags', 'architecture, building, construction, constructor, contractor, engineering, industry, painter, renovation')
+@section('title', 'Tentang Kami')
+@section('meta_description', 'Profil PT Soborejo — perusahaan general contractor dan jasa konstruksi Indonesia untuk proyek gedung, bangunan, dan industri.')
+@section('meta_keywords', 'PT Soborejo, tentang Soborejo, perusahaan general contractor, perusahaan konstruksi Indonesia')
+@section('canonical', route('about.index'))
 
 @section('content')
     <!--===== Breadcrumb Section    S T A R T =====-->

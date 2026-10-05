@@ -12,8 +12,9 @@
 ])
 
 @section('title', 'Home 2')
-@section('meta_description', 'Building & Construction Services Laravel 12 Template')
-@section('meta_tags', 'architecture, building, construction, constructor, contractor, engineering, industry, painter, renovation')
+@section('meta_description', 'Halaman demo template — tidak diindeks.')
+@section('meta_robots', 'noindex, nofollow')
+@section('canonical', route('home'))
 
 @section('content')
     <!--===== Hero Section   S T A R T =====-->

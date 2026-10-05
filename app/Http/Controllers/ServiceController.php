@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Services\ThemeDataService;
-use App\Models\LegalDocument;
 use App\Models\Headline;
+use App\Models\LegalDocument;
+use App\Services\ThemeDataService;
 
 class ServiceController extends Controller
 {
@@ -14,15 +13,24 @@ class ServiceController extends Controller
     public function index()
     {
         $serviceBg = Headline::first();
-        $serviceData = LegalDocument::get();
+        $serviceData = LegalDocument::query()->latest()->get();
+
         return view('services.index', compact(['serviceBg', 'serviceData']));
     }
 
-    public function details($id)
+    public function details(string $slug)
     {
         $serviceBg = Headline::first();
-        $service = LegalDocument::whereId($id)->first();
-        if (!$service) {
+        $service = LegalDocument::query()->where('slug', $slug)->first();
+
+        if (! $service && ctype_digit($slug)) {
+            $service = LegalDocument::query()->find($slug);
+            if ($service?->slug) {
+                return redirect()->route('services.details', $service->slug, 301);
+            }
+        }
+
+        if (! $service) {
             abort(404);
         }
 

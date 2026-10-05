@@ -7,6 +7,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\SubscriptionController;
 
 // ==========================================
@@ -14,6 +15,11 @@ use App\Http\Controllers\SubscriptionController;
 // ==========================================
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('home-2', [HomeController::class, 'homeTwo'])->name('home.two');
+
+// ==========================================
+// SEO
+// ==========================================
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
 // ==========================================
 // About Page Route
@@ -30,7 +36,7 @@ Route::get('/legal-document/{slug}', [ServiceController::class, 'details'])->nam
 // Project Page Route
 // ==========================================
 Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
-Route::get('/projects/{id}', [ProjectController::class, 'details'])->name('projects.details');
+Route::get('/projects/{slug}', [ProjectController::class, 'details'])->name('projects.details');
 
 // ==========================================
 // Blog Page Route

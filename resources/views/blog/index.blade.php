@@ -6,13 +6,14 @@
 ])
 
 @section('title', 'Blog')
-@section('meta_description', 'Building & Construction Services')
-@section('meta_tags', 'architecture, building, construction, constructor, contractor, engineering, industry, painter, renovation')
+@section('meta_description', 'Artikel dan insight seputar konstruksi, general contractor, dan industri bangunan dari PT Soborejo.')
+@section('meta_keywords', 'blog konstruksi, artikel general contractor, jasa konstruksi Indonesia')
+@section('canonical', route('blogs.index'))
 
 @section('content')
     <!--===== Breadcrumb Section  S T A R T =====-->
     <x-common.breadcrumb title="Blog" :breadcrumbs="['Home' => route('home'), 'Blogs' => '']" :bg="$blogBg"/>
 
     <!--===== Project Section  S T A R T =====-->
-    <x-blog.blog-all :blog="$blogData" />
+    <x-blog.blog-all :blogs="$blogData" />
 @endsection

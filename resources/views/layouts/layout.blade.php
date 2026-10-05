@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="zxx" class="no-js">
+<html lang="id" class="no-js">
 
 {{-- Head Section: meta tags, title, CSS --}}
 <x-common.head />
+<x-common.seo-schema />
 
 <body>
     <!--===== Preloader S T A R T =====-->

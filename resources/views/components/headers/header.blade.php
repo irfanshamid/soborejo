@@ -8,8 +8,8 @@
                         <a href="{{ route('home') }}" class="tp-logo">
                             <img
                                 class="img-fluid"
-                                src="{{ asset('storage/' . $settings->logo) }}" 
-                                alt="brand"
+                                src="{{ asset('storage/' . ($settings->logo ?? $settings->favicon)) }}"
+                                alt="{{ $settings->title ?? 'PT Soborejo' }}"
                             >
                         </a>
                     </div>
@@ -18,13 +18,12 @@
                             <div class="main-menu {{ $headerMenuStyle ?? '' }} d-none d-lg-block">
                                 <nav class="mobile-menu-active">
                                     <ul>
-                                        <li><a href="{{ route('home') }}#company">About Us</a></li>
-                                        <li><a href="{{ route('home') }}#our-value">Our Value</a></li>
-                                        <li><a href="{{ route('home') }}#legal-document">Legal</a></li>
-                                        <li><a href="{{ route('home') }}#scope-of-work">Scope</a></li>
-                                        <li><a href="{{ route('home') }}#our-client">Our Client</a></li>
-                                        <li><a href="{{ route('home') }}#project">Project</a></li>
-                                        <li><a href="{{ route('home') }}#blog">Blog</a></li>
+                                        <li><a href="#company">About Us</a></li>
+                                        <li><a href="#our-value">Our Value</a></li>
+                                        <li><a href="#legal-document">Legal</a></li>
+                                        <li><a href="#scope-of-work">Scope</a></li>
+                                        <li><a href="#our-client">Our Client</a></li>
+                                        <li><a href="#project">Project</a></li>
                                         <!-- <li><a href="{{ route('projects.index') }}">Projects</a>
                                             <div class="menu-icon">
                                                 <i class="flaticon-diagonal"></i>
@@ -68,7 +67,7 @@
 
                             <div class=" bg-transparent d-lg-inline-block d-none">
                                 <div class="btn-wrapper ">
-                                    <a class="theme-btn {{ $btnStyle ?? 'style5' }}" href="#contact">Contact us</a>
+                                    <a class="theme-btn {{ $btnStyle ?? 'style5' }}" href="https://linktr.ee/soborejo" target="_blank">Contact us</a>
                                 </div>
                             </div>
                         </div>

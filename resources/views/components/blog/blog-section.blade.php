@@ -19,15 +19,15 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="blog1-card">
                         <div class="blog1-card__thumb wow img-custom-anim-top" data-wow-duration="1s" data-wow-delay=".1s">
-                            <a href="{{ route('blogs.details', $blog->id) }}">
-                                <img src="{{ asset('storage/' . $blog->image) }}" alt="jpg">
+                            <a href="{{ route('blogs.details', $blog->slug) }}">
+                                <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" loading="lazy">
                             </a>
                         </div>
                         <div class="blog1-card-meta">
                             <div class="blog1-card-meta__user"><i class="fa-regular fa-user"></i> Admin</div>
                             <div class="blog1-card-meta__date"><i class="fa-regular fa-calendar-days"></i>{{ \Carbon\Carbon::parse($blog->date)->translatedFormat('d F Y') }}</div>
                         </div>
-                        <a href="{{ route('blogs.details', $blog->id) }}">
+                        <a href="{{ route('blogs.details', $blog->slug) }}">
                             <h3 class="blog1-card__title">{{ $blog->title }}</h3>
                         </a>
                     </div>

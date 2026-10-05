@@ -5,9 +5,10 @@
     'hasFooterMarque' => false,
 ])
 
-@section('title', $generalSetting->title)
-@section('meta_description', 'Building & Construction Services')
-@section('meta_tags', 'architecture, building, construction, constructor, contractor, engineering, industry, painter, renovation')
+@section('title', $generalSetting->title ?? 'PT Soborejo')
+@section('meta_description', $generalSetting->description ?? 'PT Soborejo — general contractor Indonesia untuk jasa konstruksi gedung, bangunan, dan proyek industri.')
+@section('meta_keywords', 'PT Soborejo, Soborejo, general contractor Indonesia, jasa kontraktor Indonesia, perusahaan konstruksi Indonesia, kontraktor gedung')
+@section('canonical', route('home'))
 
 @section('content')
     <!--===== HERO =====-->
